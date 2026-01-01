@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syarat & Ketentuan || Taqdir Tech Audio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet" />
+  </head>
+  <body class="has-header">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">Taqdir Tech Audio</a>
+        <nav class="site-header__nav" aria-label="Primary">
+          <a class="site-header__link" href="index.html">Home</a>
+          <a class="site-header__link" href="wishlist.html">Wishlist</a>
+          <a class="site-header__link" href="orders.html">Orders</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="products" aria-label="Syarat dan ketentuan">
+      <div class="products__inner">
+        <header class="products__header">
+          <h2 class="products__title">Syarat & Ketentuan</h2>
+          <p class="products__subtitle">Aturan singkat untuk proses order, pembayaran, dan pengiriman.</p>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq-item" open>
+            <summary class="faq-item__q">Pembayaran</summary>
+            <div class="faq-item__a">Pembayaran dilakukan via transfer setelah konfirmasi di WhatsApp.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Pengiriman</summary>
+            <div class="faq-item__a">Estimasi pengiriman 1–3 hari kerja tergantung kota. Ongkir mengikuti pilihan kota/provinsi.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Retur & Garansi</summary>
+            <div class="faq-item__a">Retur berlaku untuk barang cacat/keliru. Garansi mengikuti kebijakan produk. Mohon simpan bukti unboxing.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="siteFooter">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h2 class="site-footer__title">Taqdir Tech Audio</h2>
+          <p class="site-footer__desc">High quality sound equipment untuk pengalaman audio yang lebih maksimal.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span id="footerYear"></span> Taqdir Tech Audio. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      const y = document.getElementById('footerYear');
+      if (y) y.textContent = String(new Date().getFullYear());
+      const header = document.querySelector('.site-header');
+      const onScrollCompact = () => header && header.classList.toggle('is-compact', window.scrollY > 12);
+      window.addEventListener('scroll', onScrollCompact, { passive: true });
+      onScrollCompact();
+    </script>
+  </body>
+</html>

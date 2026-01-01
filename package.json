@@ -1,0 +1,13 @@
+{
+  "name": "taqdir-tech-audio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "live-server --port=5500 --wait=100 --no-browser",
+    "dev:open": "live-server --port=5500 --wait=100 --open=admin.html",
+    "serve": "live-server --port=5500 --wait=100 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

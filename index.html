@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taqdir Audio || High Quality Sound Equipment</title>
+    <meta name="description" content="Taqdir Tech Audio — kurasi earphone untuk musik & gaming. Konsultasi cepat via WhatsApp, pilihan produk jelas, dan checkout simpel." />
+    <meta property="og:title" content="Taqdir Tech Audio" />
+    <meta property="og:description" content="Kurasi earphone untuk musik & gaming. Konsultasi cepat via WhatsApp, checkout simpel." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/electronic-music-wireless-black-headphones-futuristic-background-high-quality-sound.jpg" />
+    <link rel="canonical" href="" />
+    <link rel="preload" as="image" href="assets/images/electronic-music-wireless-black-headphones-futuristic-background-high-quality-sound.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var canonical = window.location.href;
+          var canonEl = document.querySelector('link[rel="canonical"]');
+          if (canonEl) canonEl.setAttribute('href', canonical);
+          var ogUrl = document.querySelector('meta[property="og:url"]');
+          if (ogUrl) ogUrl.setAttribute('content', canonical);
+          var org = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Taqdir Tech Audio",
+            "url": canonical,
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "telephone": "+62-877-7721-2901"
+            }
+          };
+          var el = document.getElementById('jsonld-org');
+          if (!el) {
+            el = document.createElement('script');
+            el.type = 'application/ld+json';
+            el.id = 'jsonld-org';
+            document.head.appendChild(el);
+          }
+          el.textContent = JSON.stringify(org);
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+  </head>
+  <body class="has-header">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="particles" id="particles"></div>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">Taqdir Tech Audio</a>
+        <nav class="site-header__nav" aria-label="Primary">
+          <a class="site-header__link" href="index.html">Home</a>
+          <a class="site-header__link" href="#productList">Produk</a>
+          <a class="site-header__link" href="wishlist.html">Wishlist</a>
+          <a class="site-header__link" href="orders.html">Orders</a>
+          <a class="site-header__link" href="admin.html" id="adminLink" style="display:none;">Admin</a>
+          <a class="site-header__link" href="#siteFooter">Kontak</a>
+          <input class="site-header__search" id="headerSearch" type="search" placeholder="Cari produk..." autocomplete="off" aria-label="Cari produk" />
+          <button class="site-header__link site-header__button" id="filterToggle" type="button" aria-haspopup="dialog" aria-expanded="false">Filter</button>
+          <span class="site-header__user" id="userLabel" aria-live="polite"></span>
+          <button class="site-header__link site-header__button" id="loginButton" type="button">Login</button>
+          <button class="site-header__link site-header__button" id="logoutButton" type="button" style="display:none;">Logout</button>
+          <button class="site-header__link site-header__button" id="cartButton" type="button">Cart <span id="cartCount">0</span></button>
+        </nav>
+
+        <div class="header-filters" id="headerFilters" aria-hidden="true">
+          <div class="header-filters__panel" role="dialog" aria-label="Product filters">
+            <div class="header-filters__row">
+              <div class="catalog-controls__field">
+                <label class="catalog-controls__label" for="searchInput">Cari</label>
+                <input class="catalog-controls__input" id="searchInput" type="search" placeholder="Cari produk..." autocomplete="off" />
+              </div>
+
+              <div class="catalog-controls__field">
+                <label class="catalog-controls__label" for="colorFilter">Warna</label>
+                <select class="catalog-controls__select" id="colorFilter">
+                  <option value="">Semua</option>
+                </select>
+              </div>
+
+              <div class="catalog-controls__field">
+                <label class="catalog-controls__label" for="sortSelect">Urutkan</label>
+                <select class="catalog-controls__select" id="sortSelect">
+                  <option value="featured">Default</option>
+                  <option value="titleAsc">Nama A-Z</option>
+                  <option value="priceAsc">Harga Termurah</option>
+                  <option value="priceDesc">Harga Termahal</option>
+                </select>
+              </div>
+
+              <button class="catalog-controls__clear" id="clearFilters" type="button">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text parallax-element">
+        <h1>Taqdir Tech Audio</h1>
+        <p>Kurasi earphone untuk musik & gaming. Konsultasi cepat, checkout mudah via WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="hero-action hero-action--primary" href="#productList">Lihat Produk</a>
+          <a class="hero-action hero-action--secondary" href="https://wa.me/6287777212901" target="_blank" rel="noreferrer">Chat WhatsApp</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <section class="products" aria-label="Produk">
+      <div class="products__inner">
+        <header class="products__header">
+          <h2 class="products__title">Produk</h2>
+          <p class="products__subtitle">Pilih earphone yang cocok untuk gaya dan kebutuhan kamu.</p>
+          <div class="usecase" aria-label="Kategori cepat">
+            <button class="usecase-chip is-active" type="button" data-usecase="all">Semua</button>
+            <button class="usecase-chip" type="button" data-usecase="gaming">Gaming</button>
+            <button class="usecase-chip" type="button" data-usecase="musik">Musik</button>
+            <button class="usecase-chip" type="button" data-usecase="bass">Bass</button>
+            <button class="usecase-chip" type="button" data-usecase="anc">ANC</button>
+            <button class="usecase-chip" type="button" data-usecase="budget">Budget</button>
+          </div>
+        </header>
+
+        <div class="benefits" aria-label="Keunggulan toko">
+          <div class="benefits__grid">
+            <div class="benefit">
+              <div class="benefit__icon" aria-hidden="true">✓</div>
+              <div class="benefit__content">
+                <div class="benefit__title">Produk Terpilih</div>
+                <div class="benefit__desc">Kurasi earphone yang fokus kualitas suara.</div>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit__icon" aria-hidden="true">⚡</div>
+              <div class="benefit__content">
+                <div class="benefit__title">Respon Cepat</div>
+                <div class="benefit__desc">Checkout & tanya stok via WhatsApp.</div>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit__icon" aria-hidden="true">💬</div>
+              <div class="benefit__content">
+                <div class="benefit__title">Bantuan Pilih</div>
+                <div class="benefit__desc">Rekomendasi sesuai kebutuhan kamu.</div>
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="benefit__icon" aria-hidden="true">🔒</div>
+              <div class="benefit__content">
+                <div class="benefit__title">Transparan</div>
+                <div class="benefit__desc">Harga jelas, tanpa biaya tersembunyi.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="productList"></div>
+      </div>
+    </section>
+
+    <div class="compare-bar" id="compareBar" aria-hidden="true">
+      <div class="compare-bar__inner">
+        <div class="compare-bar__title">Compare (<span id="compareCount">0</span>/3)</div>
+        <div class="compare-bar__items" id="compareItems"></div>
+        <div class="compare-bar__actions">
+          <button class="compare-bar__btn" id="compareOpen" type="button">Bandingkan</button>
+          <button class="compare-bar__btn compare-bar__btn--ghost" id="compareClear" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="compareModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="compare"></div>
+      <div class="modal__panel" role="dialog" aria-label="Compare products">
+        <div class="modal__header">
+          <h3 class="modal__title">Bandingkan Produk</h3>
+          <button class="modal__close" type="button" data-close="compare">×</button>
+        </div>
+        <div class="modal__body">
+          <div id="compareTable"></div>
+          <div class="modal__hint" id="compareHint"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="social-proof" aria-label="Ulasan pelanggan">
+      <div class="social-proof__inner">
+        <header class="social-proof__header">
+          <h2 class="social-proof__title">Dipercaya Banyak Pembeli</h2>
+          <p class="social-proof__subtitle">Rating tinggi, respon cepat, dan rekomendasi sesuai kebutuhan.</p>
+        </header>
+
+        <div class="social-proof__grid">
+          <div class="rating-card">
+            <div class="rating-card__score">4.8</div>
+            <div class="rating-card__stars" aria-label="Rating 4.8 dari 5">★★★★★</div>
+            <div class="rating-card__meta">Dari pembeli yang order via WhatsApp</div>
+            <div class="rating-card__badges">
+              <span class="rating-badge">Fast Response</span>
+              <span class="rating-badge">Rekomendasi Jelas</span>
+              <span class="rating-badge">Barang Sesuai</span>
+            </div>
+          </div>
+
+          <div class="testimonials">
+            <article class="testimonial">
+              <p class="testimonial__quote">"Suara detail, bass pas, dan adminnya bantu pilih sesuai budget. Mantap!"</p>
+              <div class="testimonial__footer">
+                <span class="testimonial__name">Mega</span>
+                <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p class="testimonial__quote">"Pengiriman cepat dan produknya sesuai. Checkout WA juga simpel."</p>
+              <div class="testimonial__footer">
+                <span class="testimonial__name">Jamal</span>
+                <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p class="testimonial__quote">"Rekomendasi untuk gaming cocok, latency oke. Worth it."</p>
+              <div class="testimonial__footer">
+                <span class="testimonial__name">Ahmad</span>
+                <span class="testimonial__stars" aria-hidden="true">★★★★☆</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-label="Pertanyaan umum">
+      <div class="faq__inner">
+        <header class="faq__header">
+          <h2 class="faq__title">FAQ</h2>
+          <p class="faq__subtitle">Pertanyaan yang sering ditanyakan sebelum checkout.</p>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq-item">
+            <summary class="faq-item__q">Cara ordernya gimana?</summary>
+            <div class="faq-item__a">Pilih produk → tambah ke cart → isi alamat + ongkir → klik checkout. Nanti WhatsApp akan terbuka untuk konfirmasi.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Pengiriman dari mana dan berapa lama?</summary>
+            <div class="faq-item__a">Pengiriman menyesuaikan lokasi kamu. Estimasi biasanya 1–3 hari kerja tergantung kota dan kurir.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Bisa konsultasi sebelum beli?</summary>
+            <div class="faq-item__a">Bisa. Kamu bisa tanya via WhatsApp untuk rekomendasi sesuai kebutuhan (musik, gaming, kerja, dll).</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Metode pembayarannya apa?</summary>
+            <div class="faq-item__a">Saat ini pembayaran via transfer setelah konfirmasi di WhatsApp. (Payment gateway belum ada ya!)</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" aria-label="Tentang toko">
+      <div class="about__inner">
+        <div class="about__card">
+          <div class="about__content">
+            <h2 class="about__title">Tentang Taqdir Tech Audio</h2>
+            <p class="about__desc">Taqdir Tech Audio adalah kurasi earphone untuk kebutuhan harian, gaming, dan musik. Kamu bisa konsultasi biar nggak salah pilih—tinggal jelasin budget & kebutuhan, nanti kami rekomendasiin yang paling cocok.</p>
+            <div class="about__points">
+              <div class="about-point"><span class="about-point__icon" aria-hidden="true">✓</span><span>Kurasi produk yang fokus kualitas suara</span></div>
+              <div class="about-point"><span class="about-point__icon" aria-hidden="true">✓</span><span>Respon cepat via WhatsApp</span></div>
+              <div class="about-point"><span class="about-point__icon" aria-hidden="true">✓</span><span>Harga transparan + rekomendasi sesuai kebutuhan</span></div>
+            </div>
+          </div>
+          <div class="about__cta">
+            <div class="about__cta-title">Butuh rekomendasi cepat?</div>
+            <div class="about__cta-desc">Chat WhatsApp, sebutin budget + kebutuhan.</div>
+            <a class="about__cta-button" href="https://wa.me/6287777212901" target="_blank" rel="noreferrer">Chat WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="policies" aria-label="Kebijakan toko">
+      <div class="policies__inner">
+        <header class="policies__header">
+          <h2 class="policies__title">Kebijakan Toko</h2>
+          <p class="policies__subtitle">Biar jelas sebelum checkout: pengiriman, garansi, dan retur.</p>
+        </header>
+
+        <div class="policies__grid">
+          <div class="policy">
+            <div class="policy__icon" aria-hidden="true">🚚</div>
+            <div>
+              <div class="policy__title">Pengiriman</div>
+              <div class="policy__desc">Estimasi 1–3 hari kerja (tergantung kota). Ongkir otomatis tampil saat pilih provinsi & kota.</div>
+            </div>
+          </div>
+          <div class="policy">
+            <div class="policy__icon" aria-hidden="true">🛡</div>
+            <div>
+              <div class="policy__title">Garansi</div>
+              <div class="policy__desc">Garansi sesuai produk. Kalau ada masalah, langsung chat WhatsApp untuk dibantu pengecekan.</div>
+            </div>
+          </div>
+          <div class="policy">
+            <div class="policy__icon" aria-hidden="true">↩</div>
+            <div>
+              <div class="policy__title">Retur</div>
+              <div class="policy__desc">Retur untuk barang cacat/keliru (konfirmasi dulu via WhatsApp). Foto/video unboxing membantu proses lebih cepat.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+      ↑
+    </button>
+
+    <footer class="site-footer" id="siteFooter">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h2 class="site-footer__title">Taqdir Tech Audio</h2>
+          <p class="site-footer__desc">High quality sound equipment untuk pengalaman audio yang lebih maksimal.</p>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Footer">
+          <h3 class="site-footer__heading">Tautan</h3>
+          <a class="site-footer__link" href="index.html">Home</a>
+          <a class="site-footer__link" href="#productList">Produk</a>
+          <a class="site-footer__link" href="wishlist.html">Wishlist</a>
+          <a class="site-footer__link" href="orders.html">Riwayat Order</a>
+        </nav>
+
+        <div class="site-footer__contact">
+          <h3 class="site-footer__heading">Kontak</h3>
+          <a class="site-footer__link" href="mailto:taqdirwahh22@gmail.com">taqdirwahh22@gmail.com</a>
+          <a class="site-footer__link" href="https://wa.me/6287777212901" target="_blank" rel="noreferrer">WhatsApp: +62 877-7721-2901</a>
+          <div class="site-footer__meta">Alamat: Tangerang, Indonesia</div>
+          <div class="site-footer__meta">Jam: 09.00–21.00 (WIB)</div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© <span id="footerYear"></span> Taqdir Tech Audio. All rights reserved.</span>
+        <span class="site-footer__legal">
+          <a class="site-footer__link" href="privacy.html">Kebijakan Privasi</a>
+          <a class="site-footer__link" href="terms.html">Syarat & Ketentuan</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+      <div class="chat-button" id="chatButton">
+        <div class="chat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <span class="chat-badge">1</span>
+      </div>
+      
+      <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+          <div class="chat-header-content">
+            <h3>Taqdir Tech Audio</h3>
+            <span class="chat-status">Online</span>
+          </div>
+          <button class="chat-close" id="chatClose">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">
+            <div class="message-content">
+              <p>Halo! Selamat datang di Taqdir Tech Audio. Ada yang bisa saya bantu?</p>
+            </div>
+            <div class="message-time">Sekarang</div>
+          </div>
+        </div>
+        
+        <div class="chat-input-container">
+          <form class="chat-form" id="chatForm">
+            <div class="chat-input-wrapper">
+              <input type="text" id="chatInput" placeholder="Ketik pesan..." required>
+              <button type="submit" class="chat-send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="authModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="auth"></div>
+      <div class="modal__panel" role="dialog" aria-label="Authentication">
+        <div class="modal__header">
+          <h3 class="modal__title" id="authTitle">Login</h3>
+          <button class="modal__close" type="button" data-close="auth">×</button>
+        </div>
+        <form class="modal__body" id="authForm">
+          <label class="modal__label" for="authEmail">Email</label>
+          <input class="modal__input" id="authEmail" type="email" autocomplete="email" required />
+          <label class="modal__label" for="authPassword">Password</label>
+          <div class="modal__password">
+            <input class="modal__input" id="authPassword" type="password" autocomplete="current-password" required />
+            <button class="modal__password-toggle" type="button" data-toggle-password="authPassword" aria-label="Tampilkan password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <button class="modal__primary" id="authSubmit" type="submit">Login</button>
+          <button class="modal__secondary" id="authToggle" type="button" data-mode="signup">Belum punya akun? Daftar</button>
+          <div class="modal__hint" id="authHint"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="cartModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="cart"></div>
+      <div class="modal__panel" role="dialog" aria-label="Cart">
+        <div class="modal__header">
+          <h3 class="modal__title">Keranjang</h3>
+          <button class="modal__close" type="button" data-close="cart">×</button>
+        </div>
+        <div class="modal__body">
+          <div id="cartItems"></div>
+          <div class="cart-summary">
+            <div class="cart-shipping">
+              <div class="cart-shipping__row">
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipRecipient">Nama Penerima</label>
+                  <input class="catalog-controls__input" id="shipRecipient" type="text" placeholder="Nama" />
+                </div>
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipPhone">No. HP</label>
+                  <input class="catalog-controls__input" id="shipPhone" type="tel" placeholder="08xxxx" />
+                </div>
+              </div>
+              <div class="cart-shipping__row">
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipProvince">Provinsi</label>
+                  <select class="catalog-controls__select" id="shipProvince">
+                    <option value="">Pilih provinsi</option>
+                  </select>
+                </div>
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipCity">Kota/Kab</label>
+                  <select class="catalog-controls__select" id="shipCity" disabled>
+                    <option value="">Pilih kota</option>
+                  </select>
+                </div>
+              </div>
+              <div class="catalog-controls__field">
+                <label class="catalog-controls__label" for="shipStreet">Alamat</label>
+                <input class="catalog-controls__input" id="shipStreet" type="text" placeholder="Nama jalan, nomor rumah" />
+              </div>
+            </div>
+            <div>Total: <span id="cartTotal">0</span></div>
+            <div>Ongkir: <span id="shippingCost">0</span></div>
+            <div><strong>Total Akhir: <span id="grandTotal">0</span></strong></div>
+            <button class="modal__primary" id="checkoutButton" type="button">Checkout</button>
+            <div class="modal__hint" id="cartHint"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const yearEl = document.getElementById('footerYear');
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+      })();
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

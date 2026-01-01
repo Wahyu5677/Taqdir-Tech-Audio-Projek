@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist || Taqdir Tech Audio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet" />
+  </head>
+  <body class="has-header">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">Taqdir Tech Audio</a>
+        <nav class="site-header__nav" aria-label="Primary">
+          <a class="site-header__link" href="index.html">Home</a>
+          <a class="site-header__link" href="#wishlist">Wishlist</a>
+          <a class="site-header__link" href="orders.html">Riwayat Order</a>
+          <a class="site-header__link" href="admin.html" id="adminLink" style="display:none;">Admin</a>
+          <span class="site-header__user" id="userLabel" aria-live="polite"></span>
+        </nav>
+      </div>
+    </header>
+
+    <section class="products" id="wishlist" aria-label="Wishlist">
+      <div class="products__inner">
+        <header class="products__header">
+          <h2 class="products__title">Wishlist</h2>
+          <p class="products__subtitle">Produk yang kamu simpan (♥). Klik ♥ untuk menghapus.</p>
+        </header>
+        <div id="wishlistList"></div>
+      </div>
+    </section>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+    <footer class="site-footer" id="siteFooter">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h2 class="site-footer__title">Taqdir Tech Audio</h2>
+          <p class="site-footer__desc">High quality sound equipment untuk pengalaman audio yang lebih maksimal.</p>
+        </div>
+        <nav class="site-footer__links" aria-label="Footer">
+          <h3 class="site-footer__heading">Tautan</h3>
+          <a class="site-footer__link" href="index.html">Home</a>
+          <a class="site-footer__link" href="orders.html">Riwayat Order</a>
+        </nav>
+        <div class="site-footer__contact">
+          <h3 class="site-footer__heading">Kontak</h3>
+          <a class="site-footer__link" href="mailto:taqdirwahh22@gmail.com">taqdirwahh22@gmail.com</a>
+          <a class="site-footer__link" href="https://wa.me/6287777212901" target="_blank" rel="noreferrer">WhatsApp: +62 877-7721-2901</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span id="footerYear"></span> Taqdir Tech Audio. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script type="module" src="wishlist.js"></script>
+  </body>
+</html>

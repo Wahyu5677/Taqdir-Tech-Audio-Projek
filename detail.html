@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taqdir Tech Audio || High Quality Sound Equipment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="detail.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Days+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="has-header" detail-product>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">Taqdir Tech Audio</a>
+        <nav class="site-header__nav" aria-label="Primary">
+          <a class="site-header__link" href="index.html">Home</a>
+          <a class="site-header__link" href="#productDetail">Detail</a>
+          <a class="site-header__link" href="wishlist.html">Wishlist</a>
+          <a class="site-header__link" href="orders.html">Orders</a>
+          <a class="site-header__link" href="admin.html" id="adminLink" style="display:none;">Admin</a>
+          <a class="site-header__link" href="#siteFooter">Kontak</a>
+          <span class="site-header__user" id="userLabel" aria-live="polite"></span>
+          <button class="site-header__link site-header__button" id="loginButton" type="button">Login</button>
+          <button class="site-header__link site-header__button" id="logoutButton" type="button" style="display:none;">Logout</button>
+          <button class="site-header__link site-header__button" id="cartButton" type="button">Cart <span id="cartCount">0</span></button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="productDetail" id="productDetail">  
+        <p>Loading...</p>
+    </section>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+      ↑
+    </button>
+
+    <div class="modal" id="authModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="auth"></div>
+      <div class="modal__panel" role="dialog" aria-label="Authentication">
+        <div class="modal__header">
+          <h3 class="modal__title" id="authTitle">Login</h3>
+          <button class="modal__close" type="button" data-close="auth">×</button>
+        </div>
+        <form class="modal__body" id="authForm">
+          <label class="modal__label" for="authEmail">Email</label>
+          <input class="modal__input" id="authEmail" type="email" autocomplete="email" required />
+          <label class="modal__label" for="authPassword">Password</label>
+          <div class="modal__password">
+            <input class="modal__input" id="authPassword" type="password" autocomplete="current-password" required />
+            <button class="modal__password-toggle" type="button" data-toggle-password="authPassword" aria-label="Tampilkan password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <button class="modal__primary" id="authSubmit" type="submit">Login</button>
+          <button class="modal__secondary" id="authToggle" type="button" data-mode="signup">Belum punya akun? Daftar</button>
+          <div class="modal__hint" id="authHint"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="cartModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="cart"></div>
+      <div class="modal__panel" role="dialog" aria-label="Cart">
+        <div class="modal__header">
+          <h3 class="modal__title">Keranjang</h3>
+          <button class="modal__close" type="button" data-close="cart">×</button>
+        </div>
+        <div class="modal__body">
+          <div id="cartItems"></div>
+          <div class="cart-summary">
+            <div class="cart-shipping">
+              <div class="cart-shipping__row">
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipRecipient">Nama Penerima</label>
+                  <input class="catalog-controls__input" id="shipRecipient" type="text" placeholder="Nama" />
+                </div>
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipPhone">No. HP</label>
+                  <input class="catalog-controls__input" id="shipPhone" type="tel" placeholder="08xxxx" />
+                </div>
+              </div>
+              <div class="cart-shipping__row">
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipProvince">Provinsi</label>
+                  <select class="catalog-controls__select" id="shipProvince">
+                    <option value="">Pilih provinsi</option>
+                  </select>
+                </div>
+                <div class="catalog-controls__field">
+                  <label class="catalog-controls__label" for="shipCity">Kota/Kab</label>
+                  <select class="catalog-controls__select" id="shipCity" disabled>
+                    <option value="">Pilih kota</option>
+                  </select>
+                </div>
+              </div>
+              <div class="catalog-controls__field">
+                <label class="catalog-controls__label" for="shipStreet">Alamat</label>
+                <input class="catalog-controls__input" id="shipStreet" type="text" placeholder="Nama jalan, nomor rumah" />
+              </div>
+            </div>
+            <div>Total: <span id="cartTotal">0</span></div>
+            <div>Ongkir: <span id="shippingCost">0</span></div>
+            <div><strong>Total Akhir: <span id="grandTotal">0</span></strong></div>
+            <button class="modal__primary" id="checkoutButton" type="button">Checkout</button>
+            <div class="modal__hint" id="cartHint"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer" id="siteFooter">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h2 class="site-footer__title">Taqdir Tech Audio</h2>
+          <p class="site-footer__desc">High quality sound equipment untuk pengalaman audio yang lebih maksimal.</p>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Footer">
+          <h3 class="site-footer__heading">Tautan</h3>
+          <a class="site-footer__link" href="index.html">Home</a>
+        </nav>
+
+        <div class="site-footer__contact">
+          <h3 class="site-footer__heading">Kontak</h3>
+          <a class="site-footer__link" href="mailto:taqdirwahh22@gmail.com">taqdirwahh22@gmail.com</a>
+          <a class="site-footer__link" href="https://wa.me/6287777212901" target="_blank" rel="noreferrer">WhatsApp: +62 877-7721-2901</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© <span id="footerYear"></span> Taqdir Tech Audio. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const yearEl = document.getElementById('footerYear');
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+      })();
+    </script>
+
+    <script type="module" src="detail.js"></script>
+
+  </body>
+</html>
