@@ -1,5 +1,7 @@
 node_modules/
 
+*.docx
+
 # OS / Editor
 .DS_Store
 Thumbs.db
